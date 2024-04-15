@@ -1,10 +1,18 @@
+:root {
+    --primary-color: #434371;
+    --secondary-color: #B5F44A;
+    --accent-color: #7CB235;
+    --light-accent-color: #D6FF96;
+    --background-color: #f9f9f9;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #434371;
+    background-color: var(--primary-color);
 }
 
 nav {
@@ -28,7 +36,7 @@ nav .right a {
 }
 
 nav .right a:hover {
-    color: #7CB235;
+    color: var(--accent-color);
 }
 
 #about {
@@ -53,20 +61,19 @@ nav .right a:hover {
 }
 
 .text {
-    background-color: #434371;
-    padding: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    padding: 20px;
     flex-basis: 60%;
 }
 
 .text h2 {
     margin-top: 0;
-    color: #B5F44A;
-    font-size: 4em;
+    color: var(--secondary-color);
+    font-size: 2em; /* Reduce font size */
 }
 
 .text h3 {
-    font-size: 2em;
+    font-size: 1.5em; /* Reduce font size */
     color: white;
 }
 
@@ -82,100 +89,72 @@ nav .right a:hover {
     max-width: 100%;
     height: auto;
     margin-left: 20%;
+    border-radius: 10px; /* Add border radius to the image */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-top: 20px; /* Add space between text and button */
+}
 
 button {
-    background-color: #B5F44A;
-    color: #434371;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Add this line */
-    margin-right: 20px; /* Increase the spacing between buttons */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #D6FF96; /* Lighter background color on hover */
+    background-color: var(--light-accent-color);
     cursor: pointer;
 }
 
 /* Portfolio Section */
-#portfolio {
-    padding: 50px 0;
-    background-color: #8DF8B1;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h2 {
-    margin-bottom: 30px;
-}
-
-.carousel {
+#projects .project-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
+    justify-content: space-around; /* Evenly space the projects */
+    align-items: start; /* Align the top of the elements */
+    padding: 70px;
+    color: white;
+}
+#projects {
+    background-color: var(--primary-color);
 }
 
-.card {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; /* Stack the image and text vertically */
-    align-items: center; /* Center items horizontally */
+#projects .project {
+    width: 35%; /* Slightly less than half to fit side-by-side with padding */
+    text-align: center; /* Center content vertically */
+    margin: 50px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+#projects .project img {
+    width: 100%; /* Make the image expand to the container width */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.text {
-    padding: 20px;
-    text-align: left; 
+#projects .project h3,
+#projects .project p {
+    margin: 10px; /* Space between elements */
 }
 
-.text h3 {
-    margin-top: 0;
+#projects .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #B5F44A; /* Green background */
+    color: #000; /* Black text */
+    text-decoration: none; /* No underline */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s;
 }
 
-.text p {
-    margin-bottom: 10px;
+#projects .button:hover {
+    background-color: #a2e036; /* Lighter green on hover */
 }
 
-.text a {
-    text-decoration: none;
-    color: #434371;
-    background-color: #B5F44A;
-    padding: 8px 16px; 
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; 
-    display: inline-block; 
-}
-
-.text a:hover {
-    background-color: #7CB235;
-}
-
-.text a button {
-    border: none;
-    background: none;
-    color: inherit;
-    cursor: pointer;
-    padding: 0;
-    font-size: inherit;
-}
 
 /* Contact/skills section */
 #contact-skills {
@@ -201,19 +180,40 @@ h2 {
 }
 
 #footer {
-    background-color: #434371;
+    background-color: var(--primary-color);
     color: white;
-    padding: 20px;
+    padding: 50px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the footer inner div */
+}
+
+#footer .footer-inner {
+    width: 80%; /* Limit the width of the inner footer */
+    display: flex;
+    align-items: center;
+    border-top: #b5f44a solid 1px;
+    justify-content: space-between; /* Space between elements */
+    padding-top: 40px; /* Space above content */
 }
 
 #arrow {
-    margin-right: 10px;
     font-size: 2em;
+    cursor: pointer; 
 }
+
 
 .footer-content {
     flex-grow: 1;
     text-align: center;
 }
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 10px;
+}
+

@@ -69,11 +69,11 @@ nav .right a:hover {
 .text h2 {
     margin-top: 0;
     color: var(--secondary-color);
-    font-size: 2em; /* Reduce font size */
+    font-size: 2em;
 }
 
 .text h3 {
-    font-size: 1.5em; /* Reduce font size */
+    font-size: 1.5em;
     color: white;
 }
 
@@ -89,13 +89,13 @@ nav .right a:hover {
     max-width: 100%;
     height: auto;
     margin-left: 20%;
-    border-radius: 10px; /* Add border radius to the image */
+    border-radius: 10px;
 }
 
 .button-container {
     display: flex;
-    justify-content: center; /* Center the button */
-    margin-top: 20px; /* Add space between text and button */
+    justify-content: center;
+    margin-top: 20px;
 }
 
 button {
@@ -112,51 +112,49 @@ button:hover {
     cursor: pointer;
 }
 
-/* Portfolio Section */
 #projects .project-container {
     display: flex;
-    justify-content: space-around; /* Evenly space the projects */
-    align-items: start; /* Align the top of the elements */
+    justify-content: space-around;
+    align-items: start;
     padding: 70px;
     color: white;
 }
+
 #projects {
     background-color: var(--primary-color);
 }
 
 #projects .project {
-    width: 35%; /* Slightly less than half to fit side-by-side with padding */
-    text-align: center; /* Center content vertically */
+    width: 35%;
+    text-align: center;
     margin: 50px;
 }
 
 #projects .project img {
-    width: 100%; /* Make the image expand to the container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 #projects .project h3,
 #projects .project p {
-    margin: 10px; /* Space between elements */
+    margin: 10px;
 }
 
 #projects .button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
-    background-color: #B5F44A; /* Green background */
-    color: #000; /* Black text */
-    text-decoration: none; /* No underline */
-    border-radius: 8px; /* Rounded corners */
+    background-color: #B5F44A;
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 #projects .button:hover {
-    background-color: #a2e036; /* Lighter green on hover */
+    background-color: #a2e036;
 }
 
-
-/* Contact/skills section */
 #contact-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -185,23 +183,22 @@ button:hover {
     padding: 50px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the footer inner div */
+    justify-content: center;
 }
 
 #footer .footer-inner {
-    width: 80%; /* Limit the width of the inner footer */
+    width: 80%;
     display: flex;
     align-items: center;
     border-top: #b5f44a solid 1px;
-    justify-content: space-between; /* Space between elements */
-    padding-top: 40px; /* Space above content */
+    justify-content: space-between;
+    padding-top: 40px;
 }
 
 #arrow {
     font-size: 2em;
-    cursor: pointer; 
+    cursor: pointer;
 }
-
 
 .footer-content {
     flex-grow: 1;
@@ -217,3 +214,8 @@ button:hover {
     margin-left: 10px;
 }
 
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

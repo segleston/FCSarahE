@@ -2,13 +2,14 @@
     --primary-color: #434371;
     --secondary-color: #B5F44A;
     --accent-color: #7CB235;
-    --light-accent-color: #D6FF96;
+    --light-accent-color: #F6FFC6;
     --background-color: #f9f9f9;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -16,7 +17,7 @@ header {
 }
 
 nav {
-    padding: 20px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,11 +37,11 @@ nav .right a {
 }
 
 nav .right a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 #hero {
-    padding: 100px 0;
+    padding: 50px 0;
     width: 100%;
 }
 
@@ -68,13 +69,13 @@ nav .right a:hover {
 }
 
 .text h2 {
-    margin-top: 0;
     color: var(--secondary-color);
-    font-size: 2em;
+    font-size: 2.9em;
 }
 
 .text h3 {
-    font-size: 1.5em;
+    font-size: 2em;
+    padding-bottom: 30px;
     color: white;
 }
 
@@ -99,17 +100,20 @@ nav .right a:hover {
     margin-top: 20px;
 }
 
-button {
+button, .button {
     background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
+    color: #000;
+    padding: 10px 30px;
     border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-button:hover {
+button:hover, .button:hover {
     background-color: var(--light-accent-color);
-    cursor: pointer;
 }
 
 #projects .project-container {
@@ -120,14 +124,9 @@ button:hover {
     color: white;
 }
 
-#projects h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-top: 40px;
-    color: white;
-}
-
 #projects {
+    text-align: center;
+    padding-top: 40px;
     background-color: var(--primary-color);
 }
 
@@ -147,46 +146,55 @@ button:hover {
     margin: 10px;
 }
 
-#projects .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #B5F44A;
-    color: #000;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-#projects .button:hover {
-    background-color: #a2e036;
-}
-
 #contact-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--light-accent-color);
-    color: var(--primary-color)
+    color: var(--primary-color);
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.about {
+    width: 80%;
+    padding-left: 50px !important;
+}
+
+.about p {
+    padding-bottom: 30px;
 }
 
 .about,
 .skills {
-    padding: 20px;
+    padding: 40px;
 }
 
-.icons a {
-    margin-right: 10px;
+.icons a, .social-text {
+    padding: 30px;
+    margin: 5px;
     position: relative;
-}
-
-.social {
     color: var(--primary-color);
+    text-decoration: none;
 }
 
-
+.icons a:hover, .social-text:hover {
+    color: var(--secondary-color);
+}
 
 .skills ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills ul li {
@@ -223,17 +231,27 @@ button:hover {
 
 .social-icons {
     display: flex;
+    padding: 10px;
     font-size: 1.8em;
 }
 
 .social-icons a {
     color: white;
     margin-left: 10px;
-
 }
 
 .fade-in-section {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
 }

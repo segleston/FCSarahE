@@ -1,48 +1,38 @@
 const arrow = document.getElementById('arrow');
 
-// scroll to top on click
+// Scroll to top on click
 arrow.addEventListener('click', function() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
+// Function to handle fade-in animation
+function fadeIn(element) {
+  element.style.opacity = 0;
+  element.style.transform = 'translateY(100px)';
+  element.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
 
-const fadeInAnimationVariants = {
-    initial: {
-        opacity: 0,
-        y: 100,
-    },
-    animate: (index) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: 0.1 * index,
-        }
-    })
-};
-
-//  Fade in animation for project elements on the home
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          const targetElement = entry.target;
-          let animationSettings = fadeInAnimationVariants.animate(index);
-          targetElement.style.opacity = animationSettings.opacity;
-          targetElement.style.transform = `translateY(${animationSettings.y}px)`;
-          targetElement.style.transitionDelay = `${animationSettings.transition.delay}s`;
-  
-          observer.unobserve(targetElement);
-        }
+  // Trigger the animation when the element is intersecting
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              element.style.opacity = 1;
+              element.style.transform = 'translateY(0)';
+              observer.unobserve(entry.target);
+          }
       });
-    }, {
-      rootMargin: '0px',
+  }, {
       threshold: 0.5
-    });
-  
-    document.querySelectorAll('.fade-in-section').forEach((section, index) => {
-      observer.observe(section);
-    });
   });
+
+  observer.observe(element);
+}
+
+// Apply fade-in animation to elements with the class 'fade-in-section'
+document.addEventListener("DOMContentLoaded", function() {
+  const fadeInSectionElements = document.querySelectorAll('.fade-in-section');
+  fadeInSectionElements.forEach(fadeIn);
+});
+
 

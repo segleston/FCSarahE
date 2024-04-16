@@ -120,12 +120,19 @@ button:hover, .button:hover {
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: 70px;
+    padding: 50px;
     color: white;
 }
 
+
+#footer .social-icons a:hover {
+    color: var(--secondary-color); /* Change footer links color to secondary color on hover */
+}
+
+
 #projects {
     text-align: center;
+    color: white;
     padding-top: 40px;
     background-color: var(--primary-color);
 }
@@ -160,7 +167,6 @@ button:hover, .button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
 }
 
 .about {
@@ -172,9 +178,8 @@ button:hover, .button:hover {
     padding-bottom: 30px;
 }
 
-.about,
-.skills {
-    padding: 40px;
+.icons {
+    padding-bottom: 40px;
 }
 
 .icons a, .social-text {
@@ -204,7 +209,7 @@ button:hover, .button:hover {
 #footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 50px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,13 +229,26 @@ button:hover, .button:hover {
     cursor: pointer;
 }
 
+#arrow:hover {
+    color: var(--secondary-color)
+}
+
 .footer-content {
     flex-grow: 1;
     text-align: center;
 }
 
+.social-fa {
+    padding: 10px;
+}
+
 .social-icons {
     display: flex;
+    padding: 10px;
+    font-size: 1.8em;
+}
+
+.skill-list {
     padding: 10px;
     font-size: 1.8em;
 }
@@ -246,6 +264,10 @@ button:hover, .button:hover {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+
+
+
+
 @media screen and (min-width: 768px) {
     .accordion {
         display: none;
@@ -255,3 +277,4 @@ button:hover, .button:hover {
         display: flex;
     }
 }
+

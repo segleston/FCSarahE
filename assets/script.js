@@ -29,12 +29,13 @@ function fadeIn(element) {
   observer.observe(element);
 }
 
-// Apply fade-in animation to elements with the class 'fade-in-section'
+// Apply fade-in animation to elements with the class 'fade-in-section' 
 document.addEventListener("DOMContentLoaded", function() {
   const fadeInSectionElements = document.querySelectorAll('.fade-in-section');
   fadeInSectionElements.forEach(fadeIn);
 });
 
+// Code to add/remove nav bar elements on different screen sizes. 
 
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');

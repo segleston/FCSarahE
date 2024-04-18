@@ -11,13 +11,11 @@ body {
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+/* Header styling */
 header {
     background-color: var(--primary-color);
 }
-
-
-
+/* hero section with photo and text/buttons styling */
 #hero {
     padding: 50px 0;
     width: 100%;
@@ -60,7 +58,7 @@ header {
 .text p {
     color: white;
 }
-
+/* photo */
 .photo {
     flex-basis: 60%;
 }
@@ -71,7 +69,7 @@ header {
     margin-left: 20%;
     border-radius: 10px;
 }
-
+/* buttons */
 .button-container {
     display: flex;
     justify-content: center;
@@ -95,7 +93,7 @@ button, .button {
 button:hover, .button:hover {
     background-color: var(--light-accent-color);
 }
-
+/* styling for projects section */
 #projects .project-container {
     display: flex;
     justify-content: center;
@@ -104,12 +102,12 @@ button:hover, .button:hover {
     color: white;
 }
 
-
+/* hover for links in footer */
 #footer .social-icons a:hover {
     color: var(--secondary-color); /* Change footer links color to secondary color on hover */
 }
 
-
+/* projects section styles */
 #projects {
     text-align: center;
     color: white;
@@ -122,7 +120,7 @@ button:hover, .button:hover {
     text-align: center;
     margin: 50px;
 }
-
+/* project images */
 #projects .project img {
     width: 100%;
     height: auto;
@@ -132,7 +130,7 @@ button:hover, .button:hover {
 #projects .project p {
     margin: 10px;
 }
-
+/* skills section */
 #contact-skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -157,7 +155,7 @@ button:hover, .button:hover {
 .about p {
     padding-bottom: 30px;
 }
-
+/* icons in skills section */
 .icons {
     padding-bottom: 40px;
 }
@@ -173,7 +171,7 @@ button:hover, .button:hover {
 .icons a:hover, .social-text:hover {
     color: var(--secondary-color);
 }
-
+/* skills list */
 .skills ul {
     list-style-type: none;
     padding: 0;
@@ -185,7 +183,7 @@ button:hover, .button:hover {
 .skills ul li {
     margin-bottom: 10px;
 }
-
+/* footer */
 #footer {
     background-color: var(--primary-color);
     color: white;
@@ -244,7 +242,7 @@ button:hover, .button:hover {
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-
+/* navbar style */
 
 .navbar {
     background-color: var(--primary-color);
@@ -299,187 +297,182 @@ button:hover, .button:hover {
     background-color: #fff;
     margin: 5px;
 }
-
 @media screen and (max-width: 928px) {
-.photo img {
-    margin-left: 0; 
-}
-}
-
-/* CSS for medium screens and below */
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: var(--primary-color);
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .menu.show {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu li {
-        display: block; /* Change to block for medium screens and below */
-        margin-left: 0; /* Reset margin for list items */
-    }
-    #projects .project-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow projects to wrap onto the next line */
-        justify-content: center;
-        gap: 20px; /* Add gap between projects */
-    }
-
-    #projects .project {
-        flex: 0 0 calc(100% - 40px); /* Occupy full width of the container with gap included */
-    }
-    .intro {
-        flex-direction: column; /* Change flex direction to column */
-        align-items: center; /* Center align items */
-        text-align: center; /* Center align text */
-    }
-
-    .text {
-        margin-left: 0; /* Reset margin for text */
-        padding: 10px; /* Adjust padding */
-    }
-
-    .photo {
-        flex-basis: 80%; /* Adjust size of photo */
-    }
-
     .photo img {
-        width: 70%; /* Adjust width of photo */
-        margin-left: 0; /* Reset margin for photo */
+        margin-left: 0; 
     }
-
-    .text h2 {
-        font-size: 2em; /* Adjust font size */
     }
-
-    .text h3 {
-        font-size: 1em; /* Adjust font size */
-    }
-
-    button {
-        padding: 8px 20px; /* Adjust padding for buttons */
-        font-size: 0.8em; /* Adjust font size for buttons */
-    }
-    #contact-skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 10px; /* Add padding to the sides */
-    }
-
-    .about {
-        width: 100%;
-        padding: 0; /* Remove padding */
-    }
-
-    .about h2 {
-        margin-top: 20px; /* Add some space between sections */
-    }
-
-    .about{
-        padding: 5px !important;
-    }
-
-    .skills {
-        width: 100%;
-        padding: 0; /* Remove padding */
-        margin-top: 20px; /* Add some space between sections */
-    }
-
-    .skills h2 {
-        margin-bottom: 10px; /* Add some space between title and list */
-    }
-    .skills ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        gap: 20px; /* Add some gap between skills */
-    }
-
-    .skills ul li {
-        width: auto; /* Reset the width */
-        margin: 0; /* Reset margin */
-        padding: 10px;
-    }
-
-    @media screen and (max-width: 480px) {
+    
+    @media screen and (max-width: 768px) {
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: var(--primary-color);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        .menu.show {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+    
+        .menu li {
+            display: block; 
+            margin-left: 0; 
+        }
+        #projects .project-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 20px; 
+        }
+    
+        #projects .project {
+            flex: 0 0 calc(100% - 40px); 
+        }
+        .intro {
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
+        }
+    
+        .text {
+            margin-left: 0; 
+            padding: 10px; 
+        }
+    
+        .photo {
+            flex-basis: 80%; 
+        }
+    
+        .photo img {
+            width: 70%; 
+            margin-left: 0; 
+        }
+    
+        .text h2 {
+            font-size: 2em; 
+        }
+    
+        .text h3 {
+            font-size: 1em; 
+        }
+    
+        button {
+            padding: 8px 20px; 
+            font-size: 0.8em; 
+        }
+        #contact-skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 10px; 
+        }
+    
+        .about {
+            width: 100%;
+            padding: 0; 
+        }
+    
+        .about h2 {
+            margin-top: 20px; 
+        }
+    
+        .about{
+            padding: 5px !important;
+        }
+    
+        .skills {
+            width: 100%;
+            padding: 0; 
+            margin-top: 20px; 
+        }
+    
+        .skills h2 {
+            margin-bottom: 10px; 
+        }
         .skills ul {
-            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+        }
+    
+        .skills ul li {
+            width: auto; 
+            margin: 0; 
+            padding: 10px;
+        }
+    
+        @media screen and (max-width: 480px) {
+            .skills ul {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .skills ul {
+                grid-template-columns: repeat(2, 1fr); 
+            }
         }
     }
-    @media screen and (max-width: 400px) {
-        .skills ul {
-            grid-template-columns: repeat(2, 1fr); /* Three columns */
+    
+    @media screen and (min-width: 769px) {
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+    
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    
+    
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+        #projects .project-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            gap: 20px; 
+        }
+    
+        #projects .project {
+            flex: 0 0 calc(50% - 40px); 
         }
     }
-}
-
-/* CSS for large screens and above */
-@media screen and (min-width: 769px) {
-    .menu {
-        display: flex;
-        align-items: center;
+    
+    @media screen and (max-width: 768px) {
+        .social-text {
+            padding: 5px !important;
+        }
+    
     }
-
-    .menu li {
-        display: inline-block;
-        margin-left: 20px;
+    
+    @media screen and (max-width: 610px) {
+        #footer {
+            font-size: 0.5em; 
+            padding: 5px !important;
+            justify-content: space-around;
+        }
+        .footer-inner {
+            padding: 0px !important;
+        }
+    
+        .social-icons a {
+            font-size: 0.5em; 
+        }
+        .arrow {
+            font-size: 0.5em;
+        }
     }
-
-
-}
-
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    #projects .project-container {
-        display: flex;
-        flex-wrap: wrap; /* Allow projects to wrap onto the next line */
-        justify-content: center;
-        gap: 20px; /* Add gap between projects */
-    }
-
-    #projects .project {
-        flex: 0 0 calc(50% - 40px); /* Occupy approximately half of the container width with gap included */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .social-text {
-        padding: 5px !important;
-    }
-
-}
-
-/* CSS for screens under 610px */
-@media screen and (max-width: 610px) {
-    #footer {
-        font-size: 0.5em; /* Reduce the font size */
-        padding: 5px !important;
-        justify-content: space-around;
-    }
-    .footer-inner {
-        padding: 0px !important;
-    }
-
-    .social-icons a {
-        font-size: 0.5em; /* Reduce the icon size */
-    }
-    .arrow {
-        font-size: 0.5em;
-    }
-}
-
-
+    

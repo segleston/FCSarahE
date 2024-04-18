@@ -16,29 +16,7 @@ header {
     background-color: var(--primary-color);
 }
 
-nav {
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-nav h1 {
-    margin: 0;
-    font-size: 24px;
-    color: white;
-}
-
-nav .right a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    transition: color 0.3s ease;
-}
-
-nav .right a:hover {
-    color: var(--secondary-color);
-}
 
 #hero {
     padding: 50px 0;
@@ -102,7 +80,7 @@ nav .right a:hover {
 
 button, .button {
     background-color: var(--secondary-color);
-    color: #000;
+    color: var(--primary-color);
     padding: 10px 30px;
     border: none;
     transition: background-color 0.3s, color 0.3s;
@@ -111,6 +89,7 @@ button, .button {
     cursor: pointer;
     margin-right: 10px;
     margin-top: 20px;
+    font-size: 0.9em;
 }
 
 button:hover, .button:hover {
@@ -267,15 +246,240 @@ button:hover, .button:hover {
 
 
 
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
 
-@media screen and (min-width: 768px) {
-    .accordion {
+.logo {
+    font-size: 1.2rem;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right a:hover {
+    color: var(--secondary-color);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: none;
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.icon {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media screen and (max-width: 928px) {
+.photo img {
+    margin-left: 0; 
+}
+}
+
+/* CSS for medium screens and below */
+@media screen and (max-width: 768px) {
+    .menu {
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 10px;
+        border-radius: 5px;
     }
 
-    .nav-links {
+    .menu.show {
         display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu li {
+        display: block; /* Change to block for medium screens and below */
+        margin-left: 0; /* Reset margin for list items */
+    }
+    #projects .project-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow projects to wrap onto the next line */
+        justify-content: center;
+        gap: 20px; /* Add gap between projects */
+    }
+
+    #projects .project {
+        flex: 0 0 calc(100% - 40px); /* Occupy full width of the container with gap included */
+    }
+    .intro {
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .text {
+        margin-left: 0; /* Reset margin for text */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .photo {
+        flex-basis: 80%; /* Adjust size of photo */
+    }
+
+    .photo img {
+        width: 70%; /* Adjust width of photo */
+        margin-left: 0; /* Reset margin for photo */
+    }
+
+    .text h2 {
+        font-size: 2em; /* Adjust font size */
+    }
+
+    .text h3 {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    button {
+        padding: 8px 20px; /* Adjust padding for buttons */
+        font-size: 0.8em; /* Adjust font size for buttons */
+    }
+    #contact-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px; /* Add padding to the sides */
+    }
+
+    .about {
+        width: 100%;
+        padding: 0; /* Remove padding */
+    }
+
+    .about h2 {
+        margin-top: 20px; /* Add some space between sections */
+    }
+
+    .about{
+        padding: 5px !important;
+    }
+
+    .skills {
+        width: 100%;
+        padding: 0; /* Remove padding */
+        margin-top: 20px; /* Add some space between sections */
+    }
+
+    .skills h2 {
+        margin-bottom: 10px; /* Add some space between title and list */
+    }
+    .skills ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Add some gap between skills */
+    }
+
+    .skills ul li {
+        width: auto; /* Reset the width */
+        margin: 0; /* Reset margin */
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+        .skills ul {
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .skills ul {
+            grid-template-columns: repeat(2, 1fr); /* Three columns */
+        }
     }
 }
+
+/* CSS for large screens and above */
+@media screen and (min-width: 769px) {
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #projects .project-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow projects to wrap onto the next line */
+        justify-content: center;
+        gap: 20px; /* Add gap between projects */
+    }
+
+    #projects .project {
+        flex: 0 0 calc(50% - 40px); /* Occupy approximately half of the container width with gap included */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-text {
+        padding: 5px !important;
+    }
+
+}
+
+/* CSS for screens under 610px */
+@media screen and (max-width: 610px) {
+    #footer {
+        font-size: 0.5em; /* Reduce the font size */
+        padding: 5px !important;
+        justify-content: space-around;
+    }
+    .footer-inner {
+        padding: 0px !important;
+    }
+
+    .social-icons a {
+        font-size: 0.5em; /* Reduce the icon size */
+    }
+    .arrow {
+        font-size: 0.5em;
+    }
+}
+
 

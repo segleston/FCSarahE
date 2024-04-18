@@ -32,8 +32,9 @@ Welcome to my web application.
 
 ## Credits
 
-- 
-- [Icons/Favicon](https://icons8.com/icons)
+- [Canva]()
+- [Social icons](https://fontawesome.com/)
+- [Favicon]()
 
 ## License
 

@@ -13,15 +13,17 @@ Welcome to my web application.
 
 1. Home Page: showing name, a short bio and a head shot. There is also a navbar and footer.
 
-![Home page](/assets/images/)
+![Home page](/assets/images/WebPageScreenShot.png)
 
 2. About me with contact links & Skills section.
 
-![About me & skills section](./public/images/)
+![About me & skills section](/assets/images/about.png)
 
-3. Project area showing three recent projects, with technologies used and button with link to deployed application.
+![Contact me section](/assets/images/contactme.png)
 
-![Projection section](./public/images/)
+3. Project area showing six recent projects, with technologies used and button with link to deployed application.
+
+![Projection section](/assets/images/projectsscreenshot.png)
 
 
 ## Technologies Used
@@ -32,9 +34,9 @@ Welcome to my web application.
 
 ## Credits
 
-- [Canva]()
+- [Canva](https://www.canva.com/)
 - [Social icons](https://fontawesome.com/)
-- [Favicon]()
+- [Favicon](https://icons8.com/icons)
 
 ## License
 
@@ -42,20 +44,3 @@ MIT License
 
 Copyright (c) 2024 Sarah Egleston
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

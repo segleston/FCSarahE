@@ -11,10 +11,12 @@ body {
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 /* Header styling */
 header {
     background-color: var(--primary-color);
 }
+
 /* hero section with photo and text/buttons styling */
 #hero {
     padding: 50px 0;
@@ -58,6 +60,7 @@ header {
 .text p {
     color: white;
 }
+
 /* photo */
 .photo {
     flex-basis: 60%;
@@ -69,6 +72,7 @@ header {
     margin-left: 20%;
     border-radius: 10px;
 }
+
 /* buttons */
 .button-container {
     display: flex;
@@ -76,7 +80,8 @@ header {
     margin-top: 20px;
 }
 
-button, .button {
+button,
+.button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 10px 30px;
@@ -90,9 +95,11 @@ button, .button {
     font-size: 0.9em;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
     background-color: var(--light-accent-color);
 }
+
 /* styling for projects section */
 #projects .project-container {
     display: flex;
@@ -104,7 +111,8 @@ button:hover, .button:hover {
 
 /* hover for links in footer */
 #footer .social-icons a:hover {
-    color: var(--secondary-color); /* Change footer links color to secondary color on hover */
+    color: var(--secondary-color);
+    /* Change footer links color to secondary color on hover */
 }
 
 /* projects section styles */
@@ -120,6 +128,7 @@ button:hover, .button:hover {
     text-align: center;
     margin: 50px;
 }
+
 /* project images */
 #projects .project img {
     width: 100%;
@@ -130,6 +139,7 @@ button:hover, .button:hover {
 #projects .project p {
     margin: 10px;
 }
+
 /* skills section */
 #contact-skills {
     display: grid;
@@ -155,12 +165,14 @@ button:hover, .button:hover {
 .about p {
     padding-bottom: 30px;
 }
+
 /* icons in skills section */
 .icons {
     padding-bottom: 40px;
 }
 
-.icons a, .social-text {
+.icons a,
+.social-text {
     padding: 30px;
     margin: 5px;
     position: relative;
@@ -168,9 +180,11 @@ button:hover, .button:hover {
     text-decoration: none;
 }
 
-.icons a:hover, .social-text:hover {
+.icons a:hover,
+.social-text:hover {
     color: var(--secondary-color);
 }
+
 /* skills list */
 .skills ul {
     list-style-type: none;
@@ -183,6 +197,7 @@ button:hover, .button:hover {
 .skills ul li {
     margin-bottom: 10px;
 }
+
 /* footer */
 #footer {
     background-color: var(--primary-color);
@@ -297,182 +312,189 @@ button:hover, .button:hover {
     background-color: #fff;
     margin: 5px;
 }
+
 @media screen and (max-width: 928px) {
     .photo img {
-        margin-left: 0; 
+        margin-left: 0;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 10px;
+        border-radius: 5px;
     }
-    
-    @media screen and (max-width: 768px) {
-        .menu {
-            display: none;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: var(--primary-color);
-            padding: 10px;
-            border-radius: 5px;
-        }
-    
-        .menu.show {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        .hamburger {
-            display: block;
-            cursor: pointer;
-        }
-    
-        .menu li {
-            display: block; 
-            margin-left: 0; 
-        }
-        #projects .project-container {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 20px; 
-        }
-    
-        #projects .project {
-            flex: 0 0 calc(100% - 40px); 
-        }
-        .intro {
-            flex-direction: column; 
-            align-items: center; 
-            text-align: center; 
-        }
-    
-        .text {
-            margin-left: 0; 
-            padding: 10px; 
-        }
-    
-        .photo {
-            flex-basis: 80%; 
-        }
-    
-        .photo img {
-            width: 70%; 
-            margin-left: 0; 
-        }
-    
-        .text h2 {
-            font-size: 2em; 
-        }
-    
-        .text h3 {
-            font-size: 1em; 
-        }
-    
-        button {
-            padding: 8px 20px; 
-            font-size: 0.8em; 
-        }
-        #contact-skills {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 0 10px; 
-        }
-    
-        .about {
-            width: 100%;
-            padding: 0; 
-        }
-    
-        .about h2 {
-            margin-top: 20px; 
-        }
-    
-        .about{
-            padding: 5px !important;
-        }
-    
-        .skills {
-            width: 100%;
-            padding: 0; 
-            margin-top: 20px; 
-        }
-    
-        .skills h2 {
-            margin-bottom: 10px; 
-        }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu li {
+        display: block;
+        margin-left: 0;
+    }
+
+    #projects .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #projects .project {
+        flex: 0 0 calc(100% - 40px);
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .photo {
+        flex-basis: 80%;
+    }
+
+    .photo img {
+        width: 70%;
+        margin-left: 0;
+    }
+
+    .text h2 {
+        font-size: 2em;
+    }
+
+    .text h3 {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: 0.8em;
+    }
+
+    #contact-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .about {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about h2 {
+        margin-top: 20px;
+    }
+
+    .about {
+        padding: 5px !important;
+    }
+
+    .skills {
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .skills h2 {
+        margin-bottom: 10px;
+    }
+
+    .skills ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skills ul li {
+        width: auto;
+        margin: 0;
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 480px) {
         .skills ul {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); 
-            gap: 20px; 
-        }
-    
-        .skills ul li {
-            width: auto; 
-            margin: 0; 
-            padding: 10px;
-        }
-    
-        @media screen and (max-width: 480px) {
-            .skills ul {
-                grid-template-columns: repeat(3, 1fr); 
-            }
-        }
-        @media screen and (max-width: 400px) {
-            .skills ul {
-                grid-template-columns: repeat(2, 1fr); 
-            }
+            grid-template-columns: repeat(3, 1fr);
         }
     }
-    
-    @media screen and (min-width: 769px) {
-        .menu {
-            display: flex;
-            align-items: center;
-        }
-    
-        .menu li {
-            display: inline-block;
-            margin-left: 20px;
-        }
-    
-    
-    }
-    
-    @media screen and (min-width: 769px) and (max-width: 992px) {
-        #projects .project-container {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            gap: 20px; 
-        }
-    
-        #projects .project {
-            flex: 0 0 calc(50% - 40px); 
+
+    @media screen and (max-width: 400px) {
+        .skills ul {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
-    
-    @media screen and (max-width: 768px) {
-        .social-text {
-            padding: 5px !important;
-        }
-    
+}
+
+@media screen and (min-width: 769px) {
+    .menu {
+        display: flex;
+        align-items: center;
     }
-    
-    @media screen and (max-width: 610px) {
-        #footer {
-            font-size: 0.5em; 
-            padding: 5px !important;
-            justify-content: space-around;
-        }
-        .footer-inner {
-            padding: 0px !important;
-        }
-    
-        .social-icons a {
-            font-size: 0.5em; 
-        }
-        .arrow {
-            font-size: 0.5em;
-        }
+
+    .menu li {
+        display: inline-block;
+        margin-left: 20px;
     }
-    
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    #projects .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #projects .project {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .social-text {
+        padding: 5px !important;
+    }
+
+}
+
+@media screen and (max-width: 610px) {
+    #footer {
+        font-size: 0.5em;
+        padding: 5px !important;
+        justify-content: space-around;
+    }
+
+    .footer-inner {
+        padding: 0px !important;
+    }
+
+    .social-icons a {
+        font-size: 0.5em;
+    }
+
+    .arrow {
+        font-size: 0.5em;
+    }
+}

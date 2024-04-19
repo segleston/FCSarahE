@@ -4,7 +4,7 @@
 
 ## Description
 
-Welcome to my web application.
+Welcome to my personal website for my application to Founders & Coders.
 
 ## How it works
 

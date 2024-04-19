@@ -21,7 +21,7 @@ Welcome to my personal website for my application to Founders & Coders.
 
 ![Contact me section](/assets/images/contactme.png)
 
-3. Project area showing six recent projects, with technologies used and button with link to deployed application.
+3. Project area showing six recent projects, with technologies used and buttons with links to the deployed application and the applications repository.
 
 ![Projection section](/assets/images/projectsscreenshot.png)
 
